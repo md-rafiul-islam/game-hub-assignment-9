@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://image.api.playstation.com/vulcan/ap/rnd/202504/1604/ea7656bb6bf02c078cc445b8cac76500fecd6cab27b8c8f1.png",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Garena Free Fire",
+    "coverPhoto": "https://i.pinimg.com/736x/4e/ab/94/4eab94c04804ace625815663904f3ff6.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire is a survival shooter game with quick 10-minute matches and intense gameplay.",
+    "ratings": "4.2",
+    "developer": "Garena"
+  },
+  {
+    "id": "3",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://wallpapers.com/images/high/green-call-of-duty-phone-with-choppers-mq5p6w443bh07dqa.webp",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "COD Mobile brings iconic maps, multiplayer modes, and battle royale action to mobile.",
+    "ratings": "4.4",
+    "developer": "Activision"
+  },
+  {
+    "id": "4",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://wallpapers.com/images/high/kokomi-edqaywufmxvs8ttl.webp",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Genshin Impact is an open-world RPG featuring elemental combat, exploration, and storytelling.",
+    "ratings": "4.7",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "5",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://wallpapers.com/images/high/clash-of-clans-wall-breaker-vs-barbarian-xkva5z9lcx4g23e9.webp",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Clash of Clans is a strategic base-building game where players train troops and battle opponents.",
+    "ratings": "4.6",
+    "developer": "Supercell"
+  },
+  {
+    "id": "6",
+    "title": "Asphalt 9: Legends",
+    "coverPhoto": "https://wallpapers.com/images/high/asphalt-pink-racing-car-cover-ttnctwcwxs2aq1sp.webp",
+    "category": "Racing",
+    "downloadLink": "https://asphaltlegends.com/",
+    "description": "Asphalt 9 offers high-speed arcade racing with stunning graphics and real car models.",
+    "ratings": "4.3",
+    "developer": "Gameloft"
+  },
+  {
+    "id": "7",
+    "title": "Minecraft",
+    "coverPhoto": "https://wallpapers.com/images/high/minecraft-mobs-tu2bl89z7xi4wj13.webp",
+    "category": "Adventure",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft is a sandbox game where players build, explore worlds, and survive in blocky environments.",
+    "ratings": "4.8",
+    "developer": "Mojang"
+  },
+  {
+    "id": "8",
+    "title": "Among Us",
+    "coverPhoto": "https://wallpapers.com/images/high/among-us-sus-uz3s5q5td35gx5qk.webp",
+    "category": "Party",
+    "downloadLink": "https://innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a social deduction game where crewmates work together while impostors sabotage.",
+    "ratings": "4.3",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "9",
+    "title": "Mobile Legends: Bang Bang",
+    "coverPhoto": "https://wallpapers.com/images/high/mobile-legend-background-n3rniye9sgmqkxse.webp",
+    "category": "MOBA",
+    "downloadLink": "https://m.mobilelegends.com/",
+    "description": "Mobile Legends is a 5v5 MOBA game with fast-paced matches and unique heroes.",
+    "ratings": "4.4",
+    "developer": "Moonton"
+  },
+  {
+    "id": "10",
+    "title": "Valorant Mobile",
+    "coverPhoto": "https://wallpapers.com/images/high/valorant-phoenix-jett-and-viper-tbfpesqnuvo1nkgn.webp",
+    "category": "Tactical FPS",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "Valorant Mobile delivers agent-based tactical shooting with precise gunplay and abilities.",
+    "ratings": "4.6",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "11",
+    "title": "EA FC Mobile",
+    "coverPhoto": "https://wallpapers.com/images/high/diego-maradona-lionel-messi-digital-poster-6x17f59gmweorz7v.webp",
+    "category": "Sports",
+    "downloadLink": "https://www.ea.com/games/ea-sports-fc/fc-mobile",
+    "description": "EA FC Mobile is a football simulation game featuring real teams, players, and dynamic matches.",
+    "ratings": "4.1",
+    "developer": "Electronic Arts"
+  },
+  {
+    "id": "12",
+    "title": "Brawl Stars",
+    "coverPhoto": "https://wallpapers.com/images/high/sally-leon-brawl-stars-qwwxzvzldj9so5tq.webp",
+    "category": "Action",
+    "downloadLink": "https://supercell.com/en/games/brawlstars/",
+    "description": "Brawl Stars is a fast-paced 3v3 multiplayer game with unique characters and fun modes.",
+    "ratings": "4.5",
+    "developer": "Supercell"
+  }
+]
