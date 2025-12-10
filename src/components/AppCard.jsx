@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router";
 
 const AppCard = ({ app }) => {
   return (
     <div
-      key={app.id}
       className="bg-[#151821] rounded-2xl p-5 shadow-lg hover:shadow-xl
-                       transition-all duration-300 border border-transparent hover:border-[#333]"
+                       transition-all duration-300 border border-transparent hover:border-[#333] hover:scale-105"
     >
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold uppercase">{app.title}</h3>
@@ -28,13 +28,12 @@ const AppCard = ({ app }) => {
           </p>
         </div>
 
-        <a
-          href={app.downloadLink}
-          target="_blank"
+        <Link
+          to={`/game-details/${app.id}`}
           className="bg-[#d5ff3f] text-black font-semibold px-4 py-2 rounded-lg hover:bg-[#c7f536] transition"
         >
           See Details
-        </a>
+        </Link>
       </div>
     </div>
   );

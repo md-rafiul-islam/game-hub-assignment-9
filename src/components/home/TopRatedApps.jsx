@@ -21,7 +21,7 @@ const TopRatedApps = ({ data }) => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {topApps.map((app) => (
-          <AppCard app={app}></AppCard>
+          <AppCard key={app.id} app={app}></AppCard>
         ))}
       </div>
     </div>

@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.menu .active {
+  color: yellow;
+  text-decoration: underline;
+}

@@ -8,9 +8,10 @@ const AllGames = () => {
 
   const term = text.trim().toLocaleLowerCase();
   const searchedProducts = term
-    ? data.filter((product) => product.title.toLocaleLowerCase().includes(term))
+    ? data.filter((app) => app.title.toLocaleLowerCase().includes(term))
     : data;
-  console.log(searchedProducts);
+
+  // console.log(searchedProducts);
 
   const searchApp = (e) => {
     setText(e.target.value);
