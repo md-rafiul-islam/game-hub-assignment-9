@@ -2,42 +2,55 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
-const Banner = () => {
+const Banner = ({ data }) => {
+  const bannerData = data.slice(0, 5);
+
   return (
     <div>
       <>
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          <SwiperSlide>
-            <img
-              className="h-[300px] w-full object-cover"
-              src="https://image.api.playstation.com/vulcan/ap/rnd/202504/1604/ea7656bb6bf02c078cc445b8cac76500fecd6cab27b8c8f1.png"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="h-[300px] w-full bg-cover bg-center relative
-    bg-[url('https://image.api.playstation.com/vulcan/ap/rnd/202504/1604/ea7656bb6bf02c078cc445b8cac76500fecd6cab27b8c8f1.png')]"
-            >
-              <button
-                className="absolute bottom-4 left-1/2 -translate-x-1/2 
-      bg-blue-600 text-white px-4 py-2 rounded-lg font-bold"
-              >
-                Install Now
-              </button>
-            </div>
-          </SwiperSlide>
+        <Swiper
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={true}
+          loop={true}
+          effect={"fade"}
+          modules={[Pagination, Autoplay, EffectFade]}
+          className="mySwiper"
+        >
+          {bannerData.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <div
+                  className="h-[450px] w-full bg-cover bg-center relative"
+                  style={{ backgroundImage: `url(${item.coverPhoto})` }}
+                >
+                  {/* Dark gradient overlay */}
+                  <div className="absolute inset-0 bg-black/40"></div>
 
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+                  {/* Content */}
+                  <div className="absolute bottom-10 left-5 z-10 text-white">
+                    <h2 className="text-3xl font-bold drop-shadow-lg">
+                      {item.title}
+                    </h2>
+
+                    <a
+                      href={item.downloadLink}
+                      target="_blank"
+                      className="mt-3 inline-block bg-[#d5ff3f] text-black  hover:bg-[#c7f536] px-4 py-2 rounded-lg font-semibold"
+                    >
+                      Install Now
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </>
     </div>
