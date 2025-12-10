@@ -44,7 +44,7 @@ const Banner = ({ data }) => {
                       target="_blank"
                       className="mt-3 inline-block bg-[#d5ff3f] text-black  hover:bg-[#c7f536] px-4 py-2 rounded-lg font-semibold"
                     >
-                      Install Now
+                      Download Now
                     </a>
                   </div>
                 </div>

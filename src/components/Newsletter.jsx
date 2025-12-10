@@ -9,13 +9,11 @@ const Newsletter = () => {
   return (
     <div className="bg-[#0d0f17] text-white py-16 px-6">
       <div className="max-w-3xl mx-auto text-center">
-        {/* Heading */}
         <h2 className="text-4xl font-bold mb-3">Join Our Newsletter</h2>
         <p className="text-gray-400 mb-8">
           Subscribe to get the latest updates, new games, and exclusive offers.
         </p>
 
-        {/* Form */}
         <form
           onSubmit={handleSubmit}
           className="flex flex-col sm:flex-row items-center gap-4"
@@ -37,7 +35,6 @@ const Newsletter = () => {
           </button>
         </form>
 
-        {/* Small Text */}
         <p className="text-gray-500 text-sm mt-4">
           We care about your privacy. No spam ever.
         </p>
