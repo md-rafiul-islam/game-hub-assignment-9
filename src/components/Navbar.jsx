@@ -1,15 +1,25 @@
-import React from "react";
-import { Link, NavLink } from "react-router";
+import React, { use } from "react";
+import { Link, NavLink, useNavigate } from "react-router";
+import { AuthContext } from "../authProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = use(AuthContext);
+  const navigate = useNavigate();
+  // console.log(user);
+  const handleLogOut = () => {
+    logOut();
+    navigate("/");
+  };
+
   const links = (
     <>
-      <NavLink className="font-semibold" to="/">
+      <NavLink className="font-semibold text-white" to="/">
         Home
       </NavLink>
-      <NavLink className="font-semibold" to="/all-games">
+      <NavLink className="font-semibold text-white" to="/all-games">
         Apps
       </NavLink>
+      {user ? "" : <Link to="/register text-white">Register Now</Link>}
     </>
   );
 
@@ -41,7 +51,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link className="font-bold text-3xl ml-3" to="/">
+        <Link className="font-bold text-3xl ml-3 text-white" to="/">
           GameHub
         </Link>
       </div>
@@ -49,7 +59,14 @@ const Navbar = () => {
         <ul className="menu hidden lg:flex menu-horizontal px-1 space-x-2">
           {links}
         </ul>
-        <Link to="/login">Login</Link>
+        {user ? (
+          <div className="flex items-center gap-2">
+            <button onClick={handleLogOut}>Logout</button>{" "}
+            <img className="h-4 rounded-full" src={user.photoURL} alt="" />
+          </div>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
       </div>
     </div>
   );

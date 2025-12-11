@@ -1,17 +1,26 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../authProvider/AuthProvider";
 
 const Register = () => {
-  const { signUp } = use(AuthContext);
-
+  const { signUp, infoUpdate } = use(AuthContext);
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     const data = e.target;
     const email = data.email.value;
     const password = data.password.value;
+    const name = data.name.value;
+    const imgurl = data.photoURL.value;
     signUp(email, password)
-      .then((res) => console.log(res))
+      .then(() => {
+        infoUpdate(name, imgurl)
+          .then(() => {
+            navigate("/");
+            e.target.reset();
+          })
+          .catch((error) => console.log(error));
+      })
       .catch((error) => console.log(error));
   };
   0;

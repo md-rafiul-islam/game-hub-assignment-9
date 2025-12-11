@@ -7,6 +7,7 @@ import LoadingAnimation from "../components/LoadingAnimation";
 import AccountLayout from "../Layout/AccountLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivateRoute from "../authProvider/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/game-details/:id",
-        Component: GameDetailsPage,
+        element: (
+          <PrivateRoute>
+            <GameDetailsPage></GameDetailsPage>
+          </PrivateRoute>
+        ),
         loader: () => fetch("../gameData.json"),
         hydrateFallbackElement: <LoadingAnimation></LoadingAnimation>,
       },
