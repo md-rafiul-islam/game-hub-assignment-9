@@ -5,7 +5,7 @@ import LoadingAnimation from "../components/LoadingAnimation";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = use(AuthContext);
-
+  console.log(loading);
   if (loading) {
     return <LoadingAnimation></LoadingAnimation>;
   }
@@ -13,7 +13,7 @@ const PrivateRoute = ({ children }) => {
   if (user && user?.email) {
     return children;
   }
-  return <Navigate to="/login"></Navigate>;
+  return <Navigate state={location.pathname} to="/login"></Navigate>;
 };
 
 export default PrivateRoute;

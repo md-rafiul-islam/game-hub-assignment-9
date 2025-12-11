@@ -5,10 +5,12 @@ import {
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
-import { useNavigate } from "react-router";
+import { GoogleAuthProvider } from "firebase/auth";
+const googleProvider = new GoogleAuthProvider();
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -16,6 +18,10 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const googleLogin = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
 
   const signUp = (email, password) => {
     setLoading(true);
@@ -44,6 +50,8 @@ const AuthProvider = ({ children }) => {
         setUser(user);
         setLoading(false);
         // console.log(user);
+      } else {
+        setLoading(false);
       }
     });
     return () => unSubscribe();
@@ -56,6 +64,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     infoUpdate,
     loading,
+    googleLogin,
   };
   return <AuthContext value={userInfo}>{children}</AuthContext>;
 };

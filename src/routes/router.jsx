@@ -8,6 +8,7 @@ import AccountLayout from "../Layout/AccountLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "../authProvider/PrivateRoute";
+import UserInfo from "../pages/UserInfo";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,14 @@ const router = createBrowserRouter([
         ),
         loader: () => fetch("../gameData.json"),
         hydrateFallbackElement: <LoadingAnimation></LoadingAnimation>,
+      },
+      {
+        path: "/user-details",
+        element: (
+          <PrivateRoute>
+            <UserInfo></UserInfo>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
