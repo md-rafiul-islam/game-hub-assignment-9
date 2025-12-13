@@ -20,7 +20,9 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const googleLogin = () => {
-    return signInWithPopup(auth, googleProvider);
+    return signInWithPopup(auth, googleProvider)
+      .then()
+      .catch((error) => console.log(error));
   };
 
   const signUp = (email, password) => {

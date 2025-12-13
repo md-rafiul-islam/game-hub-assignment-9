@@ -1,9 +1,11 @@
 import React, { use } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../authProvider/AuthProvider";
 
 const Login = () => {
   const { logIn, googleLogin } = use(AuthContext);
+  const location = useLocation();
+
   const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();

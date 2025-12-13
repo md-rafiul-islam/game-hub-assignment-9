@@ -1,10 +1,8 @@
 import React, { use } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
-import { useNavigate } from "react-router";
 
 const UserInfo = () => {
   const { user, logOut } = use(AuthContext);
-  const navigate = useNavigate();
 
   if (!user) {
     return (

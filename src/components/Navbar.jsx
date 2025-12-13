@@ -19,7 +19,13 @@ const Navbar = () => {
       <NavLink className="font-semibold text-white" to="/all-games">
         Apps
       </NavLink>
-      {user ? "" : <Link to="/register text-white">Register Now</Link>}
+      {user ? (
+        ""
+      ) : (
+        <NavLink to="/register" className="font-semibold text-white">
+          Register Now
+        </NavLink>
+      )}
     </>
   );
 
@@ -65,7 +71,7 @@ const Navbar = () => {
             <Link to="/user-details">
               <img
                 className="h-4 rounded-full object-cover"
-                src={user.photoURL}
+                src={user?.photoURL}
                 alt=""
               />
             </Link>
