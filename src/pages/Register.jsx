@@ -48,64 +48,67 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleRegister} className="m-10">
-      <fieldset className="fieldset mx-auto bg-base-200 border-base-300 rounded-box w-xs border p-6">
-        <h1 className="text-2xl font-bold">Register here</h1>
+    <div>
+      <title>GameHub - Register</title>
+      <form onSubmit={handleRegister} className="m-10">
+        <fieldset className="fieldset mx-auto bg-base-200 border-base-300 rounded-box w-xs border p-6">
+          <h1 className="text-2xl font-bold">Register here</h1>
 
-        {/* Name */}
-        <label className="label">Name</label>
-        <input
-          type="text"
-          name="name"
-          className="input"
-          placeholder="Your Name"
-          required
-        />
+          {/* Name */}
+          <label className="label">Name</label>
+          <input
+            type="text"
+            name="name"
+            className="input"
+            placeholder="Your Name"
+            required
+          />
 
-        {/* Email */}
-        <label className="label">Email</label>
-        <input
-          type="email"
-          name="email"
-          className="input"
-          placeholder="Email"
-          required
-        />
+          {/* Email */}
+          <label className="label">Email</label>
+          <input
+            type="email"
+            name="email"
+            className="input"
+            placeholder="Email"
+            required
+          />
 
-        {/* Photo URL */}
-        <label className="label">PhotoURL</label>
-        <input
-          type="text"
-          name="photoURL"
-          className="input"
-          placeholder="Photo URL"
-        />
+          {/* Photo URL */}
+          <label className="label">PhotoURL</label>
+          <input
+            type="text"
+            name="photoURL"
+            className="input"
+            placeholder="Photo URL"
+          />
 
-        {/* Password */}
-        <label className="label">Password</label>
-        <input
-          type="password"
-          name="password"
-          className="input"
-          placeholder="Password"
-          required
-        />
+          {/* Password */}
+          <label className="label">Password</label>
+          <input
+            type="password"
+            name="password"
+            className="input"
+            placeholder="Password"
+            required
+          />
 
-        {/* Error Message */}
-        {error && <p className="text-red-500 mt-2">{error}</p>}
+          {/* Error Message */}
+          {error && <p className="text-red-500 mt-2">{error}</p>}
 
-        <button type="submit" className="btn btn-neutral mt-4">
-          Sign Up
-        </button>
+          <button type="submit" className="btn btn-neutral mt-4">
+            Sign Up
+          </button>
 
-        <p className="mt-2">
-          Already have an account?{" "}
-          <Link to="/login" className="text-blue-500 hover:text-blue-700">
-            Sign in
-          </Link>
-        </p>
-      </fieldset>
-    </form>
+          <p className="mt-2">
+            Already have an account?{" "}
+            <Link to="/login" className="text-blue-500 hover:text-blue-700">
+              Sign in
+            </Link>
+          </p>
+        </fieldset>
+      </form>
+    </div>
   );
 };
 

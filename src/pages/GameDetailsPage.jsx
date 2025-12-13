@@ -22,6 +22,7 @@ const GameDetailsPage = () => {
 
   return (
     <div className="w-11/12 mx-auto px-4 py-10">
+      <title>GameHub - GameDetails</title>
       <img className="h-96 rounded-2xl" src={game.coverPhoto} alt="" />
 
       <div className="mt-6">

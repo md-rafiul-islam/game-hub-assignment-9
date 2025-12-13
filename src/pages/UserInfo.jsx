@@ -18,6 +18,7 @@ const UserInfo = () => {
 
   return (
     <div className="max-w-md mx-auto mt-10 bg-[#1e1e1e] text-white rounded-2xl p-6 shadow-lg">
+      <title>GameHub - User</title>
       <div className="flex items-center gap-4">
         <img
           src={

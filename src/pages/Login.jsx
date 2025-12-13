@@ -19,6 +19,7 @@ const Login = () => {
   };
   return (
     <div>
+      <title>GameHub - Login</title>
       <form onSubmit={handleLogin} className="m-10">
         <fieldset className="fieldset mx-auto bg-base-200 border-base-300 rounded-box w-xs border p-6">
           <h1 className="text-2xl font-bold">Please Login</h1>

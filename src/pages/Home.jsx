@@ -8,6 +8,7 @@ const Home = () => {
   const data = useLoaderData();
   return (
     <div className="w-11/12 mx-auto ">
+      <title>GameHub - Home</title>
       <Banner data={data}></Banner>
       <TopRatedApps data={data}></TopRatedApps>
       <Newsletter></Newsletter>

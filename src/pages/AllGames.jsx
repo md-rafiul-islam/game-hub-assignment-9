@@ -19,6 +19,7 @@ const AllGames = () => {
 
   return (
     <div className="w-11/12 mx-auto mt-7">
+      <title>GameHub - All Games</title>
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-2xl">All Games</h1>
         <div>
