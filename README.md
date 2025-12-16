@@ -3,3 +3,5 @@ Description: A web application where user can download games(demo) and play in t
 
 Frontend: React+Vite, Tailwindcss, Swiper Corusel
 Auth: Firebase
+
+live: https://gamehub-40aaa.web.app/
